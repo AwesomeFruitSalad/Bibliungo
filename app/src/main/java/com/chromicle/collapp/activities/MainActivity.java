@@ -1,5 +1,6 @@
 package com.chromicle.collapp.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.chromicle.collapp.R;
@@ -38,5 +39,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @OnClick(R.id.btnFiction)
+    public void buttonFiction(){
+        Intent intent = new Intent(MainActivity.this,MapsActivity.class);
+        intent.putExtra("ID", "fiction");
+        startActivity(intent);
+    }
+
+
+
+    @OnClick(R.id.btnTextBooks)
+    public void buttonTextbook(){
+        Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+        intent.putExtra("ID", "textbook");
+        startActivity(intent);
+    }
 
 }

@@ -46,12 +46,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     TextView listBookOwner;
 
     String bookName, bookDes, bookAmount, bookOwner;
+    String ID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         ButterKnife.bind(this);
+
+        ID = getIntent().getStringExtra("ID");
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -119,7 +122,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void addFirebaseInstance() {
         UserUtils user = new UserUtils();
         String dbUserName = user.getDbUserName();
-        booksDb = FirebaseDatabase.getInstance().getReference("fiction");
+        booksDb = FirebaseDatabase.getInstance().getReference(ID);
     }
 
     @Override
