@@ -1,16 +1,16 @@
-package com.chromicle.collapp.ui.gallery;
+package com.chromicle.collapp.ui.add;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class AddValueViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public AddValueViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("This is Add value fragment");
     }
 
     public LiveData<String> getText() {
