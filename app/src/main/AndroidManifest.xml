@@ -10,12 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.AddValue"
+            android:name=".activities.AddBookActivity"
             android:label="Add New Book"></activity>
-        <activity
-            android:name=".activities.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.add.AddValueFragment" />
+        <activity android:name=".activities.MainActivity" />
         <activity
             android:name=".activities.LoginActivity"
             android:label="@string/app_name"

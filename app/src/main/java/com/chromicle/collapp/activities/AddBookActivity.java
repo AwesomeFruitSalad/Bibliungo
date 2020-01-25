@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.chromicle.collapp.R;
 
-public class AddValue extends AppCompatActivity {
+public class AddBookActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
