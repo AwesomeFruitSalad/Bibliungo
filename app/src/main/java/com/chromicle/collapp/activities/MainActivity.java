@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
                 ActivityUtils.launchActivity(MainActivity.this, AddBookActivity.class,false);
             }
         });
+    }
+
+    @OnClick(R.id.buttonFiction)
+    public void buttonFiction(){
+        ActivityUtils.launchActivity(MainActivity.this,MapsActivity.class,false);
     }
 
 

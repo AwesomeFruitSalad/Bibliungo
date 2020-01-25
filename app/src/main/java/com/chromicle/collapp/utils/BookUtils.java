@@ -7,6 +7,10 @@ package com.chromicle.collapp.utils;
 public class BookUtils {
     private String bookName, bookLat, bookLong, bookDes, bookAmount,user;
 
+    public BookUtils(){
+
+    }
+
     public BookUtils(String bookName, String bookLat, String bookLong, String bookDes, String bookAmount, String user) {
         this.bookName = bookName;
         this.bookLat = bookLat;

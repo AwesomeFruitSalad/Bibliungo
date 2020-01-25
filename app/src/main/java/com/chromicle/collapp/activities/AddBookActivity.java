@@ -78,7 +78,7 @@ public class AddBookActivity extends AppCompatActivity {
         String bookLat = "13.007";
         String bookLong = "74.792";
 
-        BookUtils bookDetails = new BookUtils(bookName, bookLat, bookLong, bookDes, bookAmount,user.getUserName());
+        BookUtils bookDetails = new BookUtils(bookName, bookLat, bookLong, bookDes, bookAmount,user.getDbUserName());
         bookDb .child(id)
                 .setValue(bookDetails)
                 .addOnSuccessListener(
