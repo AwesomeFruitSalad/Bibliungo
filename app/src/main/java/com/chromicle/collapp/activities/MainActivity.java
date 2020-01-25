@@ -37,10 +37,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick(R.id.buttonFiction)
-    public void buttonFiction(){
-        ActivityUtils.launchActivity(MainActivity.this,MapsActivity.class,false);
-    }
 
 
 }
