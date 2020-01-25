@@ -34,11 +34,10 @@
             android:imeOptions="actionDone"
             android:padding="12dp"
             android:shadowColor="#000000"
-            android:textSize="15sp"
-            android:inputType="date" />
+            android:textSize="15sp" />
 
         <Button
-            android:id="@+id/btn_date"
+            android:id="@+id/btn_location"
             android:layout_width="120dp"
             android:layout_height="55dp"
             android:layout_marginRight="100dp"
@@ -76,7 +75,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <EditText
-        android:id="@+id/editTextPoojaName"
+        android:id="@+id/editTextBookType"
         android:layout_width="160dp"
         android:layout_height="51dp"
         android:layout_marginStart="35dp"
