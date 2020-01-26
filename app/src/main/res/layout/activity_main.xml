@@ -102,13 +102,13 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="139dp"
-                            android:src="@drawable/harrypotter" />
+                            android:src="@drawable/lordoflight" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Harry Potter"
+                            android:text="Lord of Light"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="#000000" />
                     </LinearLayout>
@@ -130,13 +130,13 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="139dp"
-                            android:src="@drawable/chem" />
+                            android:src="@drawable/hobbit" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Chemistry textbook"
+                            android:text="The Hobbit"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="#000000" />
                     </LinearLayout>
