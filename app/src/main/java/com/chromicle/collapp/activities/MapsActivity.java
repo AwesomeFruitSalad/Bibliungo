@@ -47,6 +47,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     String bookName, bookDes, bookAmount, bookOwner;
     String ID;
+    LatLng loc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +93,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 bookOwner = poojaValue.getUser();
                                 bookDes = poojaValue.getBookDes();
 
-                                LatLng loc = new LatLng(Double.valueOf(poojaValue.getBookLat()), Double.valueOf(poojaValue.getBookLong()));
+                                loc = new LatLng(Double.valueOf(poojaValue.getBookLat()), Double.valueOf(poojaValue.getBookLong()));
                                 mMap.addMarker(new MarkerOptions().position(loc).title(bookName));
                             }
                         }
@@ -116,6 +117,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
+        loc = new LatLng(13.007,74.792);
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
     }
 
 

@@ -53,6 +53,22 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    @OnClick(R.id.btnBiographies)
+    public void buttonBiographies(){
+        Intent intent = new Intent(MainActivity.this,MapsActivity.class);
+        intent.putExtra("ID", "bio");
+        startActivity(intent);
+    }
+
+
+    @OnClick(R.id.btnNonFiction)
+    public void buttonNonFiction(){
+        Intent intent = new Intent(MainActivity.this,MapsActivity.class);
+        intent.putExtra("ID", "non-fiction");
+        startActivity(intent);
+    }
+
     @OnClick(R.id.bookHarry)
     public void buttonHarry(){
         Intent intent = new Intent(MainActivity.this, showBookActivity.class);

@@ -182,8 +182,8 @@
                 android:id="@+id/btnFiction"
                 android:layout_width="163dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 app:cardBackgroundColor="@color/fui_bgEmail">
 
                 <TextView
@@ -201,8 +201,8 @@
                 android:id="@+id/btnTextBooks"
                 android:layout_width="163dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 app:cardBackgroundColor="@color/fui_bgTwitter">
 
                 <TextView
@@ -224,10 +224,10 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/btnNonFiction"
                 android:layout_width="163dp"
-                app:cardBackgroundColor="@color/fui_bgGitHub"
                 android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp">
+                app:cardBackgroundColor="@color/fui_bgGitHub">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -244,8 +244,8 @@
                 android:id="@+id/btnBiographies"
                 android:layout_width="163dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp">
 
                 <TextView
                     android:layout_width="match_parent"
