@@ -28,7 +28,7 @@
                 android:fontFamily="@font/worksans"
                 android:text="Books you may like"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="#000000" />
+                android:textColor="#000" />
 
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
@@ -65,7 +65,7 @@
                                 android:gravity="center_horizontal"
                                 android:text="Harry Potter"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                                android:textColor="#000000" />
+                                android:textColor="#000" />
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
@@ -73,6 +73,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/bookChem"
+
                         android:layout_width="160dp"
                         android:layout_height="180dp"
                         android:layout_marginTop="24dp"
@@ -96,7 +97,7 @@
                                 android:text="Organic Chemistry"
 
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                                android:textColor="#000000"
+                                android:textColor="#000"
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -164,8 +165,8 @@
 
             <androidx.appcompat.widget.SearchView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_margin="24dp"
+                android:layout_height="50dp"
+                android:layout_margin="6dp"
                 android:background="@drawable/edittext_background"
                 android:fontFamily="@font/worksans" />
 
@@ -179,9 +180,11 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/btnFiction"
-                android:layout_width="160dp"
+                android:layout_width="163dp"
                 android:layout_height="100dp"
-                android:layout_margin="24dp">
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                app:cardBackgroundColor="@color/fui_bgEmail">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -190,16 +193,17 @@
                     android:gravity="center"
                     android:text="Fiction"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="#000000" />
+                    android:textColor="#fff" />
             </androidx.cardview.widget.CardView>
 
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/btnTextBooks"
-                android:layout_width="160dp"
+                android:layout_width="163dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp">
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                app:cardBackgroundColor="@color/fui_bgTwitter">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -208,10 +212,9 @@
                     android:gravity="center"
                     android:text="Textbooks"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="#000000" />
+                    android:textColor="#ffffff" />
             </androidx.cardview.widget.CardView>
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -220,9 +223,11 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/btnNonFiction"
-                android:layout_width="160dp"
+                android:layout_width="163dp"
+                app:cardBackgroundColor="@color/fui_bgGitHub"
                 android:layout_height="100dp"
-                android:layout_margin="24dp">
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -231,16 +236,16 @@
                     android:gravity="center"
                     android:text="Non Fiction"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="#000000" />
+                    android:textColor="#ffffff" />
             </androidx.cardview.widget.CardView>
 
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/btnBiographies"
-                android:layout_width="160dp"
+                android:layout_width="163dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp">
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -257,10 +262,10 @@
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
-            android:layout_height="90dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_marginTop="95dp"
-            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
             app:srcCompat="@drawable/ic_add_black_24dp" />
 
     </LinearLayout>
