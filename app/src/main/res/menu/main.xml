@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_user"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:title="Profile"
+        app:showAsAction="always"
+        tools:ignore="HardcodedText" />
 </menu>
