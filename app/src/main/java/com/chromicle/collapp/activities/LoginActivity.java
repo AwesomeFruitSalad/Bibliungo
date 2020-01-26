@@ -6,7 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import com.chromicle.collapp.R;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
@@ -14,13 +15,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.util.Arrays;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 /**
- * @author Chromicle (ajayprabhakar369@gmail.com)
- * @since 25/01/2020
- */
+* @author Chromicle (ajayprabhakar369@gmail.com)
+* @since 25/01/2020
+*/
 public class LoginActivity extends AppCompatActivity {
 
     @BindView(R.id.sign_in_button)
@@ -35,7 +33,6 @@ public class LoginActivity extends AppCompatActivity {
         signInButton.setOnClickListener(new UserSignIn());
         isUserSignin();
     }
-
 
     private void isUserSignin() {
         if (FirebaseAuth.getInstance().getCurrentUser() == null) {

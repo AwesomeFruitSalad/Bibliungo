@@ -6,20 +6,18 @@ import android.content.ContextWrapper;
 import android.content.Intent;
 
 /**
- * @author by Chromicle (ajayprabhakar369@gmail.com)
- * @since 1/25/2020
- */
-
+* @author by Chromicle (ajayprabhakar369@gmail.com)
+* @since 1/25/2020
+*/
 public class ActivityUtils {
 
-    private ActivityUtils() {
-    }
+    private ActivityUtils() {}
 
     /**
-     * Getting the {@link Activity} from {@link Context}.
-     *
-     * @param context input context
-     */
+    * Getting the {@link Activity} from {@link Context}.
+    *
+    * @param context input context
+    */
     public static Activity getActivity(Context context) {
         if (context == null) {
             return null;
@@ -34,12 +32,9 @@ public class ActivityUtils {
         return null;
     }
 
-    /**
-     * launch an {@link Activity}.
-     */
-    public static void launchActivity(Activity thisActivity,
-                                      Class<? extends Activity> targetActivity,
-                                      boolean shouldFinish) {
+    /** launch an {@link Activity}. */
+    public static void launchActivity(
+            Activity thisActivity, Class<? extends Activity> targetActivity, boolean shouldFinish) {
         Intent intent = new Intent(thisActivity, targetActivity);
         thisActivity.startActivity(intent);
 

@@ -4,10 +4,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 /**
- * @author by Chromicle (ajayprabhakar369@gmail.com)
- * @since 1/25/2020
- */
-
+* @author by Chromicle (ajayprabhakar369@gmail.com)
+* @since 1/25/2020
+*/
 public class UserUtils {
 
     private FirebaseUser user;

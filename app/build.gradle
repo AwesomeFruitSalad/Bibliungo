@@ -1,3 +1,6 @@
+plugins {
+    id "com.diffplug.gradle.spotless" version "3.24.0"
+}
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
@@ -21,6 +24,17 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    spotless {
+        java {
+            googleJavaFormat()
+            indentWithTabs(2)
+            endWithNewline()
+            trimTrailingWhitespace()
+            indentWithSpaces(4)
+            target '**/*.java'
+        }
     }
 }
 

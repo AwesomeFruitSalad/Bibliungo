@@ -1,17 +1,21 @@
 package com.chromicle.collapp.utils;
 
 /**
- * @author by Chromicle (ajayprabhakar369@gmail.com)
- * @since 1/25/2020
- */
+* @author by Chromicle (ajayprabhakar369@gmail.com)
+* @since 1/25/2020
+*/
 public class BookUtils {
-    private String bookName, bookLat, bookLong, bookDes, bookAmount,user;
+    private String bookName, bookLat, bookLong, bookDes, bookAmount, user;
 
-    public BookUtils(){
+    public BookUtils() {}
 
-    }
-
-    public BookUtils(String bookName, String bookLat, String bookLong, String bookDes, String bookAmount, String user) {
+    public BookUtils(
+            String bookName,
+            String bookLat,
+            String bookLong,
+            String bookDes,
+            String bookAmount,
+            String user) {
         this.bookName = bookName;
         this.bookLat = bookLat;
         this.bookLong = bookLong;
