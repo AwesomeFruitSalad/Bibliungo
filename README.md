@@ -39,17 +39,17 @@ These components can be downloaded bundled at the [Android studio IDE](https://d
 ## Screenshots
 <table>
      <tr>
-          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133659-ebc05300-4051-11ea-9bfb-1807304491c5.jpg" /><br /><center><b>Login Screen</b></center></td>
-          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133660-ec58e980-4051-11ea-807d-3f367b38ef42.jpg" /><br /><center><b>Main Screen</b></center></td>
-          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133661-ec58e980-4051-11ea-99b6-d388da35728b.jpg" /><br /><center><b>Upload Document screen</b></center></td>
+          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133662-ec58e980-4051-11ea-8544-10cce09e872f.jpg" /><br /><center><b>Login Screen</b></center></td>
+          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133661-ec58e980-4051-11ea-99b6-d388da35728b.jpg" /><br /><center><b>Home Screen</b></center></td>
+          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133660-ec58e980-4051-11ea-807d-3f367b38ef42.jpg" /><br /><center><b>Map View</b></center></td>
      </tr>
      
 </table>
 <table>
      <tr>
-          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133662-ec58e980-4051-11ea-8544-10cce09e872f.jpg" /><br /><center><b>Login Screen</b></center></td>
-          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133663-ecf18000-4051-11ea-8603-a6d5584ecbe8.jpg" /><br /><center><b>Main Screen</b></center></td>
-          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133664-ecf18000-4051-11ea-972b-000424e2a4cd.jpg" /><br /><center><b>Upload Document screen</b></center></td>
+          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133664-ecf18000-4051-11ea-972b-000424e2a4cd.jpg" /><br /><center><b>Upload Book</b></center></td>
+          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133663-ecf18000-4051-11ea-8603-a6d5584ecbe8.jpg" /><br /><center><b>Search Screen</b></center></td>
+          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133659-ebc05300-4051-11ea-9bfb-1807304491c5.jpg" /><br /><center><b>Profile View</b></center></td>
      </tr>
      
 </table>
