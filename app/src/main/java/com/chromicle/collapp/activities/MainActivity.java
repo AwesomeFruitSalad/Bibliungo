@@ -46,6 +46,55 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @OnClick(R.id.bookHarry)
+    public void buttonHarry(){
+        Intent intent = new Intent(MainActivity.this, showBookActivity.class);
+        intent.putExtra("OWNER_NAME", "vaishnavs4201");
+        intent.putExtra("BOOK_NAME", "Harry potter");
+        intent.putExtra("OWNER_DES", "This is great book written by JK rowling");
+        intent.putExtra("BOOK_TYPE", "fiction");
+        intent.putExtra("BOOK_COST", "RS: 800");
+        intent.putExtra("BOOK_LOCATION", "13.007  74.792");
+        startActivity(intent);
+    }
+
+
+    @OnClick(R.id.bookChem)
+    public void buttonChem() {
+        Intent intent = new Intent(MainActivity.this, showBookActivity.class);
+        intent.putExtra("OWNER_NAME", "ajayprabhakar369");
+        intent.putExtra("BOOK_NAME", "Chemistry TextBook");
+        intent.putExtra("OWNER_DES", "This is usefull for +12");
+        intent.putExtra("BOOK_TYPE", "textbook");
+        intent.putExtra("BOOK_COST", "RS: 350");
+        intent.putExtra("BOOK_LOCATION", "13.007  74.792");
+        startActivity(intent);
+    }
+
+
+    @OnClick(R.id.bookHobbit)
+    public void buttonHobbit(){
+        Intent intent = new Intent(MainActivity.this, showBookActivity.class);
+        intent.putExtra("OWNER_NAME", "vaishnavs4201");
+        intent.putExtra("BOOK_NAME", "The Hobbit");
+        intent.putExtra("OWNER_DES", "It is the prequel to Lord of Rings");
+        intent.putExtra("BOOK_TYPE", "fiction");
+        intent.putExtra("BOOK_COST", "RS: 966");
+        intent.putExtra("BOOK_LOCATION", "13.007  74.792");
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.bookLord)
+    public void buttonLord(){
+        Intent intent = new Intent(MainActivity.this, showBookActivity.class);
+        intent.putExtra("OWNER_NAME", "ajayprabhakar369");
+        intent.putExtra("BOOK_NAME", "The Lord");
+        intent.putExtra("OWNER_DES", "award winning science fiction book");
+        intent.putExtra("BOOK_TYPE", "fiction");
+        intent.putExtra("BOOK_COST", "RS: 777");
+        intent.putExtra("BOOK_LOCATION", "13.007  74.792");
+        startActivity(intent);
+    }
 
 
     @OnClick(R.id.btnTextBooks)
