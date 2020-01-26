@@ -165,13 +165,14 @@
 
             <EditText
                 android:id="@+id/search"
-                android:drawableLeft="@drawable/ic_search_black_24dp"
-                android:paddingLeft="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="6dp"
                 android:background="@drawable/edittext_background"
-                android:fontFamily="@font/worksans" />
+                android:drawableLeft="@drawable/ic_search_black_24dp"
+                android:fontFamily="@font/worksans"
+                android:hint="Search for Book"
+                android:paddingLeft="20dp" />
 
         </LinearLayout>
 

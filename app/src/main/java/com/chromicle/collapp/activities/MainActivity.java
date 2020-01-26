@@ -9,19 +9,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.ui.AppBarConfiguration;
-
-import com.chromicle.collapp.R;
-import com.chromicle.collapp.utils.ActivityUtils;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
-
+import com.chromicle.collapp.R;
+import com.chromicle.collapp.utils.ActivityUtils;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,68 +28,66 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.search)
     EditText searchView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ActivityUtils.launchActivity(MainActivity.this, AddBookActivity.class,false);
-            }
-        });
+        fab.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        ActivityUtils.launchActivity(MainActivity.this, AddBookActivity.class, false);
+                    }
+                });
 
         searchAdapter();
     }
 
     private void searchAdapter() {
-        searchView.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                Intent intent = new Intent(MainActivity.this, SearchView.class);
-                startActivity(intent);
-            }
+        searchView.addTextChangedListener(
+                new TextWatcher() {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+                        Intent intent = new Intent(MainActivity.this, SearchView.class);
+                        startActivity(intent);
+                    }
 
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-                // TODO Auto-generated method stub
-            }
+                        // TODO Auto-generated method stub
+                    }
 
-            @Override
-            public void afterTextChanged(Editable s) {
-            }
-        });
+                    @Override
+                    public void afterTextChanged(Editable s) {}
+                });
     }
 
     @OnClick(R.id.btnFiction)
-    public void buttonFiction(){
-        Intent intent = new Intent(MainActivity.this,MapsActivity.class);
+    public void buttonFiction() {
+        Intent intent = new Intent(MainActivity.this, MapsActivity.class);
         intent.putExtra("ID", "fiction");
         startActivity(intent);
     }
 
-
     @OnClick(R.id.btnBiographies)
-    public void buttonBiographies(){
-        Intent intent = new Intent(MainActivity.this,MapsActivity.class);
+    public void buttonBiographies() {
+        Intent intent = new Intent(MainActivity.this, MapsActivity.class);
         intent.putExtra("ID", "bio");
         startActivity(intent);
     }
 
-
     @OnClick(R.id.btnNonFiction)
-    public void buttonNonFiction(){
-        Intent intent = new Intent(MainActivity.this,MapsActivity.class);
+    public void buttonNonFiction() {
+        Intent intent = new Intent(MainActivity.this, MapsActivity.class);
         intent.putExtra("ID", "non-fiction");
         startActivity(intent);
     }
 
     @OnClick(R.id.bookHarry)
-    public void buttonHarry(){
+    public void buttonHarry() {
         Intent intent = new Intent(MainActivity.this, showBookActivity.class);
         intent.putExtra("OWNER_NAME", "vaishnavs4201");
         intent.putExtra("BOOK_NAME", "Harry potter");
@@ -104,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("BOOK_LOCATION", "13.007  74.792");
         startActivity(intent);
     }
-
 
     @OnClick(R.id.bookChem)
     public void buttonChem() {
@@ -118,9 +110,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
     @OnClick(R.id.bookHobbit)
-    public void buttonHobbit(){
+    public void buttonHobbit() {
         Intent intent = new Intent(MainActivity.this, showBookActivity.class);
         intent.putExtra("OWNER_NAME", "vaishnavs4201");
         intent.putExtra("BOOK_NAME", "The Hobbit");
@@ -132,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.bookLord)
-    public void buttonLord(){
+    public void buttonLord() {
         Intent intent = new Intent(MainActivity.this, showBookActivity.class);
         intent.putExtra("OWNER_NAME", "ajayprabhakar369");
         intent.putExtra("BOOK_NAME", "The Lord");
@@ -143,14 +134,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
     @OnClick(R.id.btnTextBooks)
-    public void buttonTextbook(){
+    public void buttonTextbook() {
         Intent intent = new Intent(MainActivity.this, MapsActivity.class);
         intent.putExtra("ID", "textbook");
         startActivity(intent);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -170,10 +159,9 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.profile) {
-            ActivityUtils.launchActivity(MainActivity.this, ProfileActivity.class,false);
+            ActivityUtils.launchActivity(MainActivity.this, ProfileActivity.class, false);
         }
 
         return true;
     }
-
 }

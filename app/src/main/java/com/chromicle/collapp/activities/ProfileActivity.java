@@ -1,17 +1,16 @@
 package com.chromicle.collapp.activities;
 
+import android.os.Bundle;
+import android.widget.TextView;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.widget.TextView;
-import android.widget.Toast;
-
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import com.chromicle.collapp.R;
 import com.chromicle.collapp.adapter.UserUploadedAdapter;
-import com.chromicle.collapp.utils.BookUtils;
 import com.chromicle.collapp.utils.UserUploaded;
 import com.chromicle.collapp.utils.UserUtils;
 import com.google.firebase.database.DataSnapshot;
@@ -19,12 +18,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -76,7 +71,7 @@ public class ProfileActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                             UserUploaded bookValue = postSnapshot.getValue(UserUploaded.class);
-                            Toast.makeText(ProfileActivity.this,"I am here",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProfileActivity.this, "I am here", Toast.LENGTH_SHORT).show();
                             if (bookValue != null) {
                                 if (bookValue.getUser().equals(user.getDbUserName())) {
                                     booksArrayList.add(bookValue);
@@ -90,7 +85,8 @@ public class ProfileActivity extends AppCompatActivity {
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
-                        Toast.makeText(ProfileActivity.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ProfileActivity.this, databaseError.getMessage(), Toast.LENGTH_SHORT)
+                                .show();
                     }
                 });
     }

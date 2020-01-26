@@ -7,21 +7,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.chromicle.collapp.R;
 import com.chromicle.collapp.utils.UserUploaded;
-import com.google.android.gms.common.data.DataHolder;
-
 import java.util.List;
 
 /**
- * @author by Chromicle (ajayprabhakar369@gmail.com)
- * @since 1/26/2020
- */
-public class UserUploadedAdapter extends RecyclerView.Adapter<UserUploadedAdapter.UserUplodedViewHolder> {
+* @author by Chromicle (ajayprabhakar369@gmail.com)
+* @since 1/26/2020
+*/
+public class UserUploadedAdapter
+        extends RecyclerView.Adapter<UserUploadedAdapter.UserUplodedViewHolder> {
 
     private Context context;
     private List<UserUploaded> userUploadedList;
@@ -46,17 +43,19 @@ public class UserUploadedAdapter extends RecyclerView.Adapter<UserUploadedAdapte
         holder.bookDes.setText(userUploaded.getBookDes());
         holder.bookAmount.setText(userUploaded.getBookAmount());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String mobileNumber = "9515253369";
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_DIAL); // Action for what intent called for
-                intent.setData(Uri.parse("tel: " + mobileNumber)); // Data with intent respective action on intent
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
-            }
-        });
+        holder.itemView.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String mobileNumber = "9515253369";
+                        Intent intent = new Intent();
+                        intent.setAction(Intent.ACTION_DIAL); // Action for what intent called for
+                        intent.setData(
+                                Uri.parse("tel: " + mobileNumber)); // Data with intent respective action on intent
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        context.startActivity(intent);
+                    }
+                });
     }
 
     @Override
@@ -64,7 +63,7 @@ public class UserUploadedAdapter extends RecyclerView.Adapter<UserUploadedAdapte
         return userUploadedList.size();
     }
 
-    public void updateList(List<UserUploaded> list){
+    public void updateList(List<UserUploaded> list) {
         userUploadedList = list;
         notifyDataSetChanged();
     }

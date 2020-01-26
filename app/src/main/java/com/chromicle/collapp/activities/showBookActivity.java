@@ -1,22 +1,17 @@
 package com.chromicle.collapp.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.chromicle.collapp.R;
-
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import com.chromicle.collapp.R;
 
 public class showBookActivity extends AppCompatActivity {
 
-
     @BindView(R.id.bookName)
     TextView bookName;
-
 
     @BindView(R.id.bookOwner)
     TextView bookOwner;
@@ -54,19 +49,14 @@ public class showBookActivity extends AppCompatActivity {
         bookLocation.setText(getIntent().getStringExtra("BOOK_LOCATION"));
 
         String book = getIntent().getStringExtra("BOOK_NAME");
-        if (book.equals("Harry potter")){
+        if (book.equals("Harry potter")) {
             photo.setImageResource(R.drawable.harrypotter);
-        }
-        else if (book.equals("Chemistry TextBook")){
+        } else if (book.equals("Chemistry TextBook")) {
             photo.setImageResource(R.drawable.chem);
-        }
-        else if (book.equals("The Hobbit")){
+        } else if (book.equals("The Hobbit")) {
             photo.setImageResource(R.drawable.hobbit);
-        }
-        else {
+        } else {
             photo.setImageResource(R.drawable.lordoflight);
         }
     }
-
-
 }
