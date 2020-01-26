@@ -6,6 +6,8 @@
 [![Android Studio](https://img.shields.io/badge/android%20studio-v3.4.1-blue.svg?cacheSeconds=2592000)](https://developer.android.com/studio/)
 [![Gradle](https://img.shields.io/badge/gradle-v5.1.1-green.svg?cacheSeconds=2592000)](https://docs.gradle.org/5.1.1/release-notes.html)
 
+Bibliungo is a platform for avid readers in a locality to share and exchange books with each other.
+The app scans for other users in your vicinity who are searching for second hand books to buy or exchange. On finding a match, you will be given their contact information after which you may meet up IRL for your new book and hopefully a new friend!
 
 ## Pre-requisites
 
