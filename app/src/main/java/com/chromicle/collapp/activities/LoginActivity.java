@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
                             .createSignInIntentBuilder()
                             .setAvailableProviders(signInIntentBuilders)
                             .setIsSmartLockEnabled(false)
-                            .setLogo(R.mipmap.ic_launcher)
+                            .setLogo(R.drawable.ic_books)
                             .build(),
                     200);
         } else if (FirebaseAuth.getInstance().getCurrentUser().getDisplayName() != null) {
