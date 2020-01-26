@@ -39,36 +39,41 @@ These components can be downloaded bundled at the [Android studio IDE](https://d
 ## Screenshots
 <table>
      <tr>
-          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/69048369-4bcbc500-0a23-11ea-8c98-6e3fd3ead6d3.jpg" /><br /><center><b>Login Screen</b></center></td>
-          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/69048366-4b332e80-0a23-11ea-9abd-29606d90a058.jpg" /><br /><center><b>Main Screen</b></center></td>
-          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/69048367-4b332e80-0a23-11ea-943b-139033dd3a86.jpg" /><br /><center><b>Upload Document screen</b></center></td>
+          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133659-ebc05300-4051-11ea-9bfb-1807304491c5.jpg" /><br /><center><b>Login Screen</b></center></td>
+          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133660-ec58e980-4051-11ea-807d-3f367b38ef42.jpg" /><br /><center><b>Main Screen</b></center></td>
+          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133661-ec58e980-4051-11ea-99b6-d388da35728b.jpg" /><br /><center><b>Upload Document screen</b></center></td>
      </tr>
+     
+</table>
+<table>
+     <tr>
+          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133662-ec58e980-4051-11ea-8544-10cce09e872f.jpg" /><br /><center><b>Login Screen</b></center></td>
+          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133663-ecf18000-4051-11ea-8603-a6d5584ecbe8.jpg" /><br /><center><b>Main Screen</b></center></td>
+          <td><img height="500" src="https://user-images.githubusercontent.com/48018942/73133664-ecf18000-4051-11ea-972b-000424e2a4cd.jpg" /><br /><center><b>Upload Document screen</b></center></td>
+     </tr>
+     
 </table>
 
 
 ## Workflow of app
 
 ```
-AmritaResouce
- ┣ activies
+bibliungo
+ ┣ activities
+ ┃ ┣ AddBookActivity.java
  ┃ ┣ LoginActivity.java
  ┃ ┣ MainActivity.java
- ┃ ┗ UploadActivity.java
+ ┃ ┣ MapsActivity.java
+ ┃ ┣ ProfileActivity.java
+ ┃ ┣ SearchView.java
+ ┃ ┗ showBookActivity.java
  ┣ adapter
- ┃ ┗ UploadDocumentAdapter.java
- ┣ clicklistners
- ┃ ┗ RecyclerItemClickListener.java
- ┣ models
- ┃ ┣ SubjectModel.java
- ┃ ┣ UploadDocumentModel.java
- ┃ ┣ UploadDocumentViewmodel.java
- ┃ ┗ UserViewModel.java
- ┣ utils
- ┃ ┣ AlertDialogUtil.java
- ┃ ┣ FireStoreQueryLiveData.java
- ┃ ┗ NetworkUtil.java
- ┣ MainApplication.java
- ┗ webViewActivity.java
+ ┃ ┗ UserUploadedAdapter.java
+ ┗ utils
+ ┃ ┣ ActivityUtils.java
+ ┃ ┣ BookUtils.java
+ ┃ ┣ UserUploaded.java
+ ┃ ┗ UserUtils.java
  
  ```
 
@@ -94,7 +99,7 @@ If there are any missing dependencies, install them first by clicking on the lin
 
 ## PR Instruction
 
-This project uses [Travis CI](https://travis-ci.org/Chromicle/AmritaResource) for checking pull requests. So before committing your changes, open Terminal via android studio and run the following commands:
+This project uses Travis CI for checking pull requests. So before committing your changes, open Terminal via android studio and run the following commands:
 
 For Windows:  
 - `gradlew clean` then  
