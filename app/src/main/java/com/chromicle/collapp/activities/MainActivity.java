@@ -3,18 +3,19 @@ package com.chromicle.collapp.activities;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.ui.AppBarConfiguration;
 
 import com.chromicle.collapp.R;
 import com.chromicle.collapp.utils.ActivityUtils;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-
-import androidx.navigation.ui.AppBarConfiguration;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.fab)
     FloatingActionButton fab;
 
-    private MenuItem profileMenu;
+    @BindView(R.id.search)
+    EditText searchView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +46,29 @@ public class MainActivity extends AppCompatActivity {
                 ActivityUtils.launchActivity(MainActivity.this, AddBookActivity.class,false);
             }
         });
+
+        searchAdapter();
     }
 
+    private void searchAdapter() {
+        searchView.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Intent intent = new Intent(MainActivity.this, SearchView.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+    }
 
     @OnClick(R.id.btnFiction)
     public void buttonFiction(){
@@ -132,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-        profileMenu = menu.findItem(R.id.profile);
+        MenuItem profileMenu = menu.findItem(R.id.profile);
         return true;
     }
 

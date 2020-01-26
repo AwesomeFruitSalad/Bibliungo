@@ -1,6 +1,8 @@
 package com.chromicle.collapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.chromicle.collapp.R;
 import com.chromicle.collapp.utils.UserUploaded;
+import com.google.android.gms.common.data.DataHolder;
 
 import java.util.List;
 
@@ -42,11 +45,28 @@ public class UserUploadedAdapter extends RecyclerView.Adapter<UserUploadedAdapte
         holder.bookName.setText(userUploaded.getBookName());
         holder.bookDes.setText(userUploaded.getBookDes());
         holder.bookAmount.setText(userUploaded.getBookAmount());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String mobileNumber = "9515253369";
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_DIAL); // Action for what intent called for
+                intent.setData(Uri.parse("tel: " + mobileNumber)); // Data with intent respective action on intent
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return userUploadedList.size();
+    }
+
+    public void updateList(List<UserUploaded> list){
+        userUploadedList = list;
+        notifyDataSetChanged();
     }
 
     class UserUplodedViewHolder extends RecyclerView.ViewHolder {
